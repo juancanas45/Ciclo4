@@ -29,7 +29,7 @@ const calcularDepreciacionNIIFEnDolares=(precioInicial, precioFinal, vidaUtil, n
   var dep=(precioInicial-precioFinal)/vidaUtil;
   var dolar=3778;
   dep=(dep/dolar); 
-  retun dep;
+  return dep;
   
 
 }
