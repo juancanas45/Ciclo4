@@ -27,4 +27,4 @@ const calcularDepreciacionNIIFEnDolares=(precioInicial, precioFinal, vidaUtil, n
 }
 
 modelu.exports.calcularDepreciacionNIIF = calcularDepreciacionNIIF;
-modelu.exports.calcularDepreciacionNIIF = calcularDepreciacionNIIF;
+modelu.exports.calcularDepreciacionNIIFEnDolares = calcularDepreciacionNIIFEnDolares;
