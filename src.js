@@ -1,7 +1,14 @@
 const calcularDepreciacionNIIF =(precioInicial, precioFinal, vidaUtil, numeroPeriodoAconsultar)=>{
-  if (vidaUtil>=0){
+  
+  if (vidaUtil === 0){
               return 0;
         }
+  
+  if (vidaUtil < 0){
+              return 0;
+        }
+  
+  
   if (numeroPeriodoAconsultar>vidaUtil){
               return precioFinal;
         }
@@ -15,16 +22,17 @@ const calcularDepreciacionNIIF =(precioInicial, precioFinal, vidaUtil, numeroPer
 }
 
 const calcularDepreciacionNIIFEnDolares=(precioInicial, precioFinal, vidaUtil, numeroPeriodoAconsultar)=>{
-   if (vidaUtil>=0){
+   if (precioInicial<0){
               return "error";
         }
   
   var dep=(precioInicial-precioFinal)/vidaUtil;
   var dolar=3778;
-  return (dep/dolar); 
+  dep=(dep/dolar); 
+  retun dep;
   
 
 }
 
-modelu.exports.calcularDepreciacionNIIF = calcularDepreciacionNIIF;
-modelu.exports.calcularDepreciacionNIIFEnDolares = calcularDepreciacionNIIFEnDolares;
+module.exports.calcularDepreciacionNIIF = calcularDepreciacionNIIF;
+module.exports.calcularDepreciacionNIIFEnDolares = calcularDepreciacionNIIFEnDolares;
