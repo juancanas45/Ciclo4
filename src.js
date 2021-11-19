@@ -15,6 +15,14 @@ const calcularDepreciacionNIIF =(precioInicial, precioFinal, vidaUtil, numeroPer
 }
 
 const calcularDepreciacionNIIFEnDolares=(precioInicial, precioFinal, vidaUtil, numeroPeriodoAconsultar)=>{
+   if (vidaUtil>=0){
+              return "error";
+        }
+  
+  var dep=(precioInicial-precioFinal)/vidaUtil;
+  var dolar=3778;
+  return (dep/dolar); 
+  
 
 }
 
